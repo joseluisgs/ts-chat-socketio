@@ -1,4 +1,4 @@
-// Nos conectamos
+// Iniciamos el cliente de socket.io
 const socket = io();
 
 // Elementos del DOM que necesitamos 
