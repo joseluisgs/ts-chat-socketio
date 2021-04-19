@@ -1,0 +1,31 @@
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: whitesmoke;
+}
+
+.footer {
+  padding: 2rem 1.5rem 1rem;
+  height: 12vh;
+}
+
+.usuarios {
+  padding: 20px;
+}
+
+.chat_ib {
+  padding: 1rem;
+}
+
+.inbox {
+  height:62vh;
+}
+
+.message_form {
+  background-color: rgb(224, 224, 224);
+  padding: 1rem;
+  height: 8vh;
+  box-shadow: -0px -2px 3px rgb(190, 190, 190);
+  border-radius: 4px;
+}
+

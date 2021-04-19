@@ -1,32 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <title>Socket.io Web Chat</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="inbox">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>TypeScript Socket.io Web Chat</title>
+  <meta name="author" content="joseluisgs">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+
+</head>
+
+<body>
+  <header class="has-background-link-light py-4 has-text-link-dark">
+      <p class="has-text-centered is-size-1 has-text-weight-semibold">TypeScript Socket.io Web Chat</p>
+  </header>
+
+  <div class="container">
+    <div class="columns">
+
+      <div class="column is-3 usuarios has-background-grey">
         <div class="inbox__people">
-          <h4>Usarios/as activos:</h4>
-        </div>
-        <div class="inbox__messages">
-          <div class="messages__history"></div>
-          <div class="fallback"></div>
+          <h4 class="is-size-4 has-text-centered has-text-info-dark has-text-weight-semibold">Usarios/as activos:</h4>
         </div>
       </div>
 
-      <form class="message_form">
-        <input type="text" class="message_form__input" placeholder="Nuevo mensaje" />
-        <button class="message_form__button" type="submit">
-          Enviar
-        </button>
-      </form>
-    </div>
+      <div class="column is-9">
+        pepepe
 
-    <script src="socket.io.js"></script>
-    <script src="main.js"></script>
-  </body>
+        <div class="columns">
+          <div class="column">
+            <div class="inbox">
+              <div class="inbox__messages">
+                <div class="messages__history"></div>
+                <div class="fallback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <form class="message_form">
+              <div class="field is-horizontal">
+                <div class="field-body">
+                  <div class="field is-expanded">
+                    <p class="control">
+                      <input class="input message_form__input" type="text" placeholder="Nuevo mensaje">
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control">
+                      <button class="button is-link message_form__button" type="submit">
+                        Enviar
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p class="copyright">Coding with <i class="mdi mdi-heart-multiple has-text-danger" size="is-small"></i> &copy;
+        <a href="http://github.com/joseluisgs" target="_blank" rel="noopener noreferrer">José Luis González
+          Sánchez</a>. 2021
+      </p>
+      <a href="https://twitter.com/joseluisgonsan" target="_blank">
+        <i class="mdi mdi-24px mdi-twitter has-text-link"></i>
+      </a>
+      <a href="https://github.com/joseluisgs" target="_blank">
+        <i class="mdi mdi-24px mdi-github has-text-grey-dark"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/joseluisgonsan/?locale=es_ES" target="_blank">
+        <i class="mdi mdi-24px mdi-linkedin has-text-link-dark"></i>
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="socket.io.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

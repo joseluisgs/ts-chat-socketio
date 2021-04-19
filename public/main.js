@@ -33,7 +33,7 @@ const addToUsersBox = (userName) => {
   // Creamos el elemento
   const userBox = `
     <div class="chat_ib ${userName}-userlist">
-      <h5>${userName}</h5>
+      <h5 class="is-size-6 has-text-info">👤 ${userName}</h5>
     </div>
   `;
   // Los añadimos
@@ -135,5 +135,5 @@ socket.on("typing", (data) => {
     return;
   }
   // Lo pintamos
-  fallback.innerHTML = `<p>${nick} esá escribiendo...</p>`;
+  fallback.innerHTML = `<p>${nick} esá escribiendo...📝 </p>`;
 });
