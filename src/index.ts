@@ -42,19 +42,8 @@ class Server {
       if (process.env.NODE_ENV !== 'test') {
         console.log(chalk.green.bold(`🟢 Servidor CHAT escuchando ✅ -> http://${host}:${port}`));
       }
-      // Lanzamos la parte de Socket.io
-      this.io = new socketio.Server();
-      this.io.attach(this.servicio);
-
-      this.io.on('connection', (socket: socketio.Socket) => {
-        console.log(chalk.cyan(`➡️ Nuevo cliente conectado: ${new Date().toLocaleString()}}`));
-        socket.emit('status', '👋 Hola desde el servidor');
-
-        socket.on('disconnect', () => {
-          console.log(chalk.yellow(`⬅️ Cliente desconectado: ${new Date().toLocaleString()}}`));
-        });
-      });
     });
+    this.initIO();
     return this.servicio; // Devolvemos la instancia del servidor
   }
 
@@ -65,8 +54,24 @@ class Server {
     // Desconectamos el socket server
     this.servicio.close();
     if (process.env.NODE_ENV !== 'test') {
+      this.io.close();
       console.log(chalk.grey.bold('⚪️ Servidor parado ❎'));
     }
+  }
+
+  initIO() {
+    // Lanzamos la parte de Socket.io
+    this.io = new socketio.Server();
+    this.io.attach(this.servicio);
+
+    this.io.on('connection', (socket: socketio.Socket) => {
+      console.log(chalk.cyan(`-> Nuevo cliente conectado: ${new Date().toLocaleString()}`));
+      socket.emit('status', '👋 Hola desde el servidor');
+
+      socket.on('disconnect', () => {
+        console.log(chalk.yellow(`<- Cliente desconectado: ${new Date().toLocaleString()}`));
+      });
+    });
   }
 }
 
