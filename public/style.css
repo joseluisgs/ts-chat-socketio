@@ -4,13 +4,20 @@ html {
   background-color: whitesmoke;
 }
 
+header {
+  box-shadow: -0px 1px 3px rgb(190, 190, 190);
+}
+
 .footer {
   padding: 2rem 1.5rem 1rem;
-  height: 12vh;
+  margin-top: 2rem;
+  box-shadow: -0px -1px 2px rgb(190, 190, 190);
 }
 
 .usuarios {
-  padding: 20px;
+  padding: 2rem;
+  box-shadow: -0px -1px 2px rgb(190, 190, 190);
+  border-radius: 8px;
 }
 
 .chat_ib {
@@ -19,6 +26,9 @@ html {
 
 .inbox {
   height:62vh;
+  box-shadow: -0px -2px 3px rgb(190, 190, 190);
+  border-radius: 8px;
+  overflow: auto;
 }
 
 .message_form {
@@ -26,6 +36,58 @@ html {
   padding: 1rem;
   height: 8vh;
   box-shadow: -0px -2px 3px rgb(190, 190, 190);
-  border-radius: 4px;
+  border-radius: 8px;
 }
+
+.inbox__people {
+  overflow: auto;
+}
+
+.escribiendo {
+  font-size:0.90rem;
+  color: rgb(100 100 100);
+  padding-left: 2rem;
+}
+
+.incoming__message {
+  font-size:0.90rem;
+  margin: 1rem;
+  color: black;
+  background-color: rgb(204, 239, 255);
+  width: 50%;
+  padding: 1rem;
+  box-shadow: -0px -2px 3px rgb(190, 190, 190);
+  border-radius: 8px
+}
+.message__author {
+  font-size:0.75rem;
+  color: grey
+}
+
+.time_date {
+  font-size:0.75rem;
+  color: grey
+}
+
+.outgoing__message {
+  font-size:0.90rem;
+  margin: 1rem;
+  color: black;
+  background-color: rgb(128, 245, 206);
+  width: 50%;
+  padding: 1rem;
+  box-shadow: -0px -2px 3px rgb(190, 190, 190);
+  border-radius: 8px;
+  align-self: flex-end;
+}
+
+.messages__history {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+  overflow: auto;
+}
+
+
 

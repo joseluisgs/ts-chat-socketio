@@ -15,43 +15,48 @@
 </head>
 
 <body>
-  <header class="has-background-link-light py-4 has-text-link-dark">
-      <p class="has-text-centered is-size-1 has-text-weight-semibold">TypeScript Socket.io Web Chat</p>
+  <header class="has-background-link py-2 mb-4 has-text-link-light">
+      <p class="has-text-centered is-size-1 has-text-weight-semibold">📨 TypeScript Socket.io Web Chat</p>
   </header>
 
   <div class="container">
-    <div class="columns">
+    <div class="columns principal">
 
-      <div class="column is-3 usuarios has-background-grey">
+      <!-- Listado de usuarios -->
+      <div class="column is-3 usuarios has-background-info-light my-3">
         <div class="inbox__people">
           <h4 class="is-size-4 has-text-centered has-text-info-dark has-text-weight-semibold">Usarios/as activos:</h4>
         </div>
       </div>
 
-      <div class="column is-9">
-        pepepe
-
+      <!-- Cuadro de mensajes -->
+      <div class="column is-9 has-background-light">
         <div class="columns">
           <div class="column">
-            <div class="inbox">
+            <div class="inbox has-background-white">
               <div class="inbox__messages">
                 <div class="messages__history"></div>
-                <div class="fallback"></div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Formulario de envío -->
         <div class="columns">
           <div class="column">
+            <div class="fallback"></div>
             <form class="message_form">
-              <div class="field is-horizontal">
+              <div class="columns">
+
+              </div>
+              <div class="field is-horizontal is-expanded">
                 <div class="field-body">
                   <div class="field is-expanded">
                     <p class="control">
                       <input class="input message_form__input" type="text" placeholder="Nuevo mensaje">
                     </p>
                   </div>
-                  <div class="field">
+                  <div class="field is-narrow">
                     <p class="control">
                       <button class="button is-link message_form__button" type="submit">
                         Enviar
@@ -68,8 +73,7 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="content has-text-centered">
+  <footer class="footer has-text-centered">
       <p class="copyright">Coding with <i class="mdi mdi-heart-multiple has-text-danger" size="is-small"></i> &copy;
         <a href="http://github.com/joseluisgs" target="_blank" rel="noopener noreferrer">José Luis González
           Sánchez</a>. 2021
@@ -83,7 +87,6 @@
       <a href="https://www.linkedin.com/in/joseluisgonsan/?locale=es_ES" target="_blank">
         <i class="mdi mdi-24px mdi-linkedin has-text-link-dark"></i>
       </a>
-    </div>
   </footer>
 
 

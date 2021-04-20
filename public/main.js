@@ -33,7 +33,7 @@ const addToUsersBox = (userName) => {
   // Creamos el elemento
   const userBox = `
     <div class="chat_ib ${userName}-userlist">
-      <h5 class="is-size-6 has-text-info">👤 ${userName}</h5>
+      <h5 class="is-size-6 has-text-link">👤 ${userName}</h5>
     </div>
   `;
   // Los añadimos
@@ -46,7 +46,7 @@ const addToUsersBox = (userName) => {
  */
 const addNewMessage = ({ user, message }) => {
   const time = new Date();
-  const formattedTime = time.toLocaleString("es-ES", { hour: "numeric", minute: "numeric" });
+  const formattedTime = time.toLocaleString("es-ES");
 
   // Si el mensaje es recibido
   const receivedMsg = `
@@ -106,6 +106,7 @@ inputField.addEventListener("keyup", () => {
   });
 });
 
+
 /** RECEPCION DE EVENTOS */
 // Si nos llega el evento de nuevo usuaro
 socket.on("new user", (data) => {
@@ -135,5 +136,5 @@ socket.on("typing", (data) => {
     return;
   }
   // Lo pintamos
-  fallback.innerHTML = `<p>${nick} esá escribiendo...📝 </p>`;
+  fallback.innerHTML = `<span class="escribiendo">💬  ${nick} está escribiendo...  📝 </span>`;
 });
