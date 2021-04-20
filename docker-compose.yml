@@ -1,0 +1,22 @@
+# Indicamos la versión
+version: '3.7'
+
+# Mis servicios
+# Iniciamos los servicios
+services:
+
+  # TS-CHAT-SCKETIO
+  ts-api-rest:
+    container_name: ts-chat-socketio
+    # image: "joseluisgs/ts-chat-socketio"
+    build: .
+    ports:
+      - 5000:5000
+    networks:
+      - ts-chat-network
+    # restart: always
+  
+# Si queremos que tengan una red propia a otros contenedores
+networks:
+  ts-chat-network:
+    driver: bridge
