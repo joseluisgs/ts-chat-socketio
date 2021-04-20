@@ -11,6 +11,15 @@ Ejemplo de chat usando la librería Socket.io de Node.js, con el objetivo de man
 
 El proyecto consiste en crar un chat en tiempo real usando la librería Socket.io de Node.js, con el objetivo de manejar websocket y poder intercambiar mensajes entre usuarios/as que se conectan.
 
+## Despliegue
+Puedes deplegarlo con Docker o Docker Compose
+```bash
+- docker run -it -p 5000:5000 --rm --name ts-chat-socketio joseluisgs/ts-chat-socketio
+```
+```bash
+- docker-compose up -d
+```
+
 ![imagen](public/chat.png)
 
 ## Autor
